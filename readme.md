@@ -7,6 +7,9 @@ for simulations require iverilog, GTKwave
 iCESugar-nano is supported by apio
 
 in order to synthesise bitstream
+
 $ make build 
+
 in order to simulate
+
 $ make sim
