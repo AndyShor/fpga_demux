@@ -1,6 +1,6 @@
 `default_nettype none
 `timescale 1ns / 100ps
-module main (
+module cable_tester (
 	input  wire       clk, // clock signal from the board
 	input  wire       rst, // reset signal from the board
     output reg ena,         // enable signal to ADG732
