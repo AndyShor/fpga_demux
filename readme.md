@@ -15,4 +15,6 @@ in order to simulate
 
 $ make sim
 
+on the photo red wire sets rst to low, LEDs D7-D3 show value at 5-bit channel selection bus, D7 lowest bit D3 highest.
+
 ![photo](/img/fpga_led_test.jpg)
