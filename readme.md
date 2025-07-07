@@ -14,3 +14,5 @@ $ make build
 in order to simulate
 
 $ make sim
+
+![photo](/img/fpga_led_test.jpg)
