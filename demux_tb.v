@@ -3,7 +3,7 @@
 
 //define testbench as a generic module
 
-module cable_tester_tb();
+module demux_tb();
 
 // internal signals
 
@@ -36,7 +36,7 @@ end
 
 // instantiate unit under test
 
-main uut(
+demux #(.CLK_DIVIDER(24'd100)) uut(
     .clk(clk),
     .rst(rst), 
     .set_ch(set_ch)
@@ -55,8 +55,8 @@ end
 
 initial begin
 
-    $dumpfile("cable_tester_tb.vcd");
-    $dumpvars(0, cable_tester_tb);
+    $dumpfile("demux_tb.vcd");
+    $dumpvars(0, demux_tb);
     #(DURATION)
     $display("finished");
     $finish;

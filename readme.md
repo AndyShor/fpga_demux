@@ -6,10 +6,16 @@ requires installed icestorm toolchain, yosys, nextpnr
 for simulations require iverilog, GTKwave
 iCESugar-nano is supported by apio
 
-in order to synthesise bitstream
+in order to synthesise bitstream for a demo with inverting LED PMOD unit
 
-$ make build 
+$ make build_pmod 
+
+in order to synthesise bitstream for controlling real demux chip
+
+$ make build_demux 
 
 in order to simulate
 
 $ make sim
+
+simulation has clock division of 100 instead of 10M for covenience

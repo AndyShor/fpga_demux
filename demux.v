@@ -1,6 +1,6 @@
 `default_nettype none
 `timescale 1ns / 100ps
-module cable_tester (
+module demux #(parameter CLK_DIVIDER = 24'd10000000) (
 	input  wire       clk, // clock signal from the board
 	input  wire       rst, // reset signal from the board
     output reg ena,         // enable signal to ADG732
@@ -12,7 +12,7 @@ module cable_tester (
 localparam STATE_COUNTING = 2'd0 ; // counting - wr to low, count clock for division
 localparam STATE_PREP = 2'd1 ; //states prep - set cs and new channel values 
 localparam STATE_UPDATE= 2'd2 ; //update - load new values by wr l-> H
-localparam CLK_DIVIDER = 24'd10000000; // clock divider value, 10M by default
+//localparam CLK_DIVIDER = 24'd10000000; // clock divider value, 10M by default
 
 reg [23:0] clk_count; //24 bit counter for 10 million clock divider
 reg div_clk;
