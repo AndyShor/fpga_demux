@@ -19,4 +19,19 @@ in order to simulate
 
 $ make sim
 
-simulation has clock division of 100 instead of 10M for covenience
+simulation has clock division of 100 instead of 10M for covenience transferred as a parameter
+
+on the photo red wire sets rst to low, LEDs D7-D3 show value at 5-bit channel selection bus, D7 lowest bit D3 highest.
+
+![photo](/img/fpga_led_test.jpg)
+
+Switching tests with actual ADG732 chip. Signals measured with scope yellow trace - CS is set high prior to changing green trace WR L-> H,
+that triggers actual switch.
+
+![photo](/img/demux_signal.jpeg)
+
+When connected to actual ADG732BSUZ on a break out board - performs switching as expected at 10 MHZ FPGA clock frequency.
+
+![photo](/img/demux_switching.jpeg)
+
+Design files for the break out board - coming
