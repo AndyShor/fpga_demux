@@ -10,7 +10,7 @@ module pmod_inverter (
     output wire [4:0] set_ch_inv  // inverted set output channel
 );
 
-demux #(.CLK_DIVIDER(24'd10000000)) uut (
+demux #(.CLK_DIVIDER(24'd2000000)) uut (
     .clk(clk),
     .rst(rst),
     .ena(ena),
