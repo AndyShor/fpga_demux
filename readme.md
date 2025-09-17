@@ -1,3 +1,7 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# FPGA implementation of ADG732  32 chanel DEMUX chip control
+
 FPGA testing of verilog code to control ADG732  32 chanel DEMUX chip.
 Assumed FPGA is iCESugar-nano, according to documentation https://github.com/wuxx/icesugar-nano
 ice40 FPGA is LP1K and package type is CM36.
@@ -9,15 +13,15 @@ LED unit uses common anode and logic signals must be inverted, which is done by 
 
 in order to synthesise bitstream for a demo with inverting LED PMOD unit
 
-$ make build_pmod 
+`$ make build_pmod `
 
 in order to synthesise bitstream for controlling real demux chip
 
-$ make build_demux 
+`$ make build_demux `
 
 in order to simulate
 
-$ make sim
+`$ make sim`
 
 simulation has clock division of 100 instead of 10M for covenience transferred as a parameter
 
@@ -34,4 +38,4 @@ When connected to actual ADG732BSUZ on a break out board - performs switching as
 
 ![photo](/img/demux_switching.jpeg)
 
-Design files for the break out board - coming
+Design files for the break out board are contained in the PCB folder including KiCAD project and gerber files.
